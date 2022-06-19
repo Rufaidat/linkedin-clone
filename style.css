@@ -55,7 +55,7 @@ header {
 }
 .main-nav a:hover,
 .icons i:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 .linkedin {
   grid-area: linkedin;
@@ -392,29 +392,18 @@ main /*.middle .flex .article*/ img {
   margin-bottom: 1rem;
 }
 .recomendation .flex .flex {
-  margin: 1rem 0;
+  margin: 1rem -0.8rem;
+  padding-right: 2.9rem;
 }
 .recomendation .flex .content {
   position: relative;
 }
 .recomendation .flex .content .border {
-  width: 8rem;
+  width: 7rem;
   padding: 1rem;
   border: 1px solid rgb(216, 218, 219);
   margin: 2rem 0;
   position: relative;
-  z-index: 1;
-  /* clip-path: polygon(0 0, 100% 0, 0% 100%); */
-  /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50); */
-  /* clip-path: polygon(
-    0% 0%,
-    100% 0,
-    100% 75%,
-    75% 75%,
-    75% 100%,
-    50% 75%,
-    0% 75%
-  ); */
 }
 .recomendation .flex .content .triangle {
   height: 30px;
@@ -424,24 +413,25 @@ main /*.middle .flex .article*/ img {
   clip-path: polygon(0 0, 0% 100%, 100% 0%);
   position: relative;
 }
-.recomendation .flex .content .triangle:after {
+.recomendation .flex .content .border:after {
   content: "";
   position: absolute;
-  height: 28px;
-  width: 28px;
-  left: 1px;
-  /* top: 100%; */
-  border-top: transparent;
+  height: 29px;
+  width: 30px;
+  left: -0.1px;
+  border-top: 1px solid white;
+  bottom: -1.8rem;
+  z-index: 1;
   background-color: white;
   clip-path: polygon(0 0, 0% 100%, 100% 0%);
 }
 .recomendation .flex:not(:first-of-type) {
   justify-content: space-around;
 }
-.recomendation .flex:nth-child(2) {
-  margin-left: 0.5rem;
-}
-.recomendation .flex:nth-child(2) .content {
+/* .recomendation .flex:nth-child(2) {
+  margin-left: 2rem;
+} */
+.recomendation .flex:nth-child(2) .content:not(:last-of-type) {
   margin-left: 2rem;
 }
 .recomendation .flex:nth-child(2) .content:last-of-type {
@@ -526,8 +516,6 @@ main .three .float {
   display: flex;
   justify-content: space-around;
   margin-left: -2rem;
-  /* float: left;
-  margin-right: 3rem; */
 }
 main .three .float img {
   margin-left: 1rem;
@@ -538,9 +526,6 @@ main .three .float .text {
 main .three .influencer {
   margin-top: 3rem;
 }
-/* main .three .influencer .flex .fa-less-than {
-  margin-right: -5rem;
-} */
 main .three .influencer .flex i {
   margin-top: 6.5rem;
   padding: 0 2rem;
